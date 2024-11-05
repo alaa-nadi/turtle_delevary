@@ -5,6 +5,8 @@ import 'package:flutter_svg/svg.dart';
 import '../../shared/colors/app_colors.dart';
 import '../../shared/componant/custom_text_field.dart';
 import '../../shared/componant/custom_button.dart';
+import '../layout_screen/layout_screen.dart';
+
 
 class Loginscreen extends StatelessWidget {
   const Loginscreen({super.key});
@@ -65,6 +67,10 @@ class Loginscreen extends StatelessWidget {
                     CustomButton(
                       onTap:(){
 
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>  LayoutScreen()),
+                        );
                       },
                       text: 'Sign in',
                     ),

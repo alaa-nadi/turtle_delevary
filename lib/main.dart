@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:now/screens/select_language/language_selection_Screen.dart';
-
+import 'package:turtle_delevary/screens/select_language/language_selection_Screen.dart';
 
 
 void main() {

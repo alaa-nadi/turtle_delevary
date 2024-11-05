@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:now/shared/colors/app_colors.dart';
+
+import '../../../shared/colors/app_colors.dart';
+
 
 class CustomContainer extends StatelessWidget {
   const CustomContainer({
@@ -25,7 +27,7 @@ class CustomContainer extends StatelessWidget {
           color: AppColors.colorBlack,
           width: 2.0,
         ),
-        color: isActiv ? AppColors.colorbrawn : AppColors.colorGarie,
+        color: isActiv ? AppColors.colorBorder : AppColors.colorGarie,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
