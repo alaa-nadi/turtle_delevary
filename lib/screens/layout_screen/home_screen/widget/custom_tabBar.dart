@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomTabBar extends StatelessWidget {
@@ -20,7 +19,7 @@ class CustomTabBar extends StatelessWidget {
         Tab(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: Center(child: Text('Delivered')),
+            child: Center(child: Text('delivered')),
           ),
         ),
         Tab(
@@ -32,7 +31,7 @@ class CustomTabBar extends StatelessWidget {
         Tab(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: Center(child: Text('Canceled')),
+            child: Center(child: Text('canceled')),
           ),
         ),
       ],

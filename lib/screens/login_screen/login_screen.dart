@@ -8,8 +8,8 @@ import '../../shared/componant/custom_button.dart';
 import '../layout_screen/layout_screen.dart';
 
 
-class Loginscreen extends StatelessWidget {
-  const Loginscreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class Loginscreen extends StatelessWidget {
           SizedBox(height: 40.h),
           Expanded(
             child: Container(
-              width: double.infinity,
+             width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.only(
                   topEnd: Radius.circular(35.r),
@@ -56,13 +56,18 @@ class Loginscreen extends StatelessWidget {
                       child: Text(
                         'Forgot Password?',
                         style: TextStyle(
-                            fontSize: 16,
-                            decoration: TextDecoration.underline,
-                            color: AppColors.colorMusterApp),
+                            fontSize: 19.sp, // حجم الخط
+                            decoration: TextDecoration.underline, // إضافة خط تحت النص
+                            decorationColor: AppColors.colorMusterApp, // تحديد لون الخط تحت النص (اختياري)
+                            decorationThickness: 1.0,
+                            color: AppColors.colorMusterApp,
+                          fontFamily: 'Rubik',
+                        ),
+
                       ),
                     ),
                     SizedBox(
-                      height: 20.h,
+                      height: 44.h,
                     ),
                     CustomButton(
                       onTap:(){
@@ -72,11 +77,26 @@ class Loginscreen extends StatelessWidget {
                           MaterialPageRoute(builder: (context) =>  LayoutScreen()),
                         );
                       },
-                      text: 'Sign in',
+                      text: 'Sign in', color: AppColors.colorBlack,
                     ),
-                    Spacer(),
-                    Text(
-                        'By continue you agree to our Terms& \n         Conditions& Privacy policy')
+                    SizedBox(height: 20.h,),
+                    Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'By continue you agree to our',
+                            style: TextStyle(color: AppColors.colorMusterApp, fontFamily: 'Rubik',), // اللون الأول
+                          ),
+                          TextSpan(
+                            text: 'Terms&      Conditions& Privacy policy',
+                            style: TextStyle(color:AppColors.colorBlack, fontFamily: 'Rubik',), // اللون الثاني
+                          ),
+                        ],
+                      ),
+                      textAlign: TextAlign.center,
+                    //  textAlign: TextAlign.center,
+                    )
+
                   ],
                 ),
               ),
@@ -85,6 +105,6 @@ class Loginscreen extends StatelessWidget {
         ],
       ),
     );
-    ;
+
   }
 }

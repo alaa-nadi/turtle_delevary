@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:turtle_delevary/shared/colors/app_colors.dart';
 
 import 'Cubit/layout_cubit.dart';
 import 'Cubit/layout_state.dart';
 
 
 class LayoutScreen extends StatelessWidget {
+  const LayoutScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -28,7 +31,7 @@ class LayoutScreen extends StatelessWidget {
                     "assets/images/Group.svg",
                     colorFilter: cubit.currentIndex == 0
                         ? ColorFilter.mode(
-                        Colors.green, BlendMode.srcIn)
+                        AppColors.colorMusterApp, BlendMode.srcIn)
                         : null,
                   ),
                   label: 'Home',
@@ -38,7 +41,7 @@ class LayoutScreen extends StatelessWidget {
                     "assets/images/fluent_wallet-24-regular.svg",
                     colorFilter: cubit.currentIndex == 1
                         ? ColorFilter.mode(
-                        Colors.green, BlendMode.srcIn)
+                    AppColors.colorMusterApp, BlendMode.srcIn)
                         : null,
                   ),
                   label: 'Wallet',
@@ -48,14 +51,14 @@ class LayoutScreen extends StatelessWidget {
                     "assets/images/gg_profile.svg",
                     colorFilter: cubit.currentIndex == 2
                         ? ColorFilter.mode(
-                        Colors.green, BlendMode.srcIn)
+                        AppColors.colorMusterApp, BlendMode.srcIn)
                         : null,
                   ),
                   label: 'Profile',
                 ),
               ],
-              selectedItemColor: Colors.green,
-              unselectedItemColor: Colors.grey,
+              selectedItemColor: AppColors.colorMusterApp,
+              unselectedItemColor:AppColors.colorBlack,
             ),
           );
         },

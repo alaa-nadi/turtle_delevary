@@ -4,7 +4,7 @@ import 'package:turtle_delevary/screens/select_language/language_selection_Scree
 
 
 void main() {
-  runApp( MeNow());
+  runApp( const MeNow());
 }
 
 class MeNow extends StatelessWidget {
@@ -13,13 +13,13 @@ class MeNow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize:  Size(440, 956
+        designSize:  const Size(440, 956
         ),
     minTextAdapt: true,
     splitScreenMode: true,
     // Use builder only if you need to use library outside ScreenUtilInit context
     builder: (_ , child) {
-         return MaterialApp(
+         return const MaterialApp(
           home: LanguageSelectionScreen(),);
       }
     );

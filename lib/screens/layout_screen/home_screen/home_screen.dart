@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:turtle_delevary/screens/layout_screen/home_screen/widget/custom_tabBar.dart';
 
 import '../../../shared/colors/app_colors.dart';
+import '../item/item_order.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,30 +14,48 @@ class HomeScreen extends StatelessWidget {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
+        backgroundColor: AppColors.colorWhite,
         appBar: AppBar(
           backgroundColor: AppColors.colorWhite,
           automaticallyImplyLeading: false,
           title: Row(
             children: [
               Image.asset('assets/images/turtle2-01 1.jpg'),
-              SizedBox(width: 50.w),
-              Text('Home'),
-              SizedBox(width: 120.w),
+              SizedBox(width: 60.w),
+               Text('Home',style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600,),),
+              SizedBox(width: 130.w),
               SvgPicture.asset('assets/images/Group (1).svg'),
             ],
           ),
         ),
         body: Column(
           children: [
-           SizedBox(height: 30,),
-            CustomTabBar(),
+           const SizedBox(height: 30,),
+            const CustomTabBar(),
             Expanded(
               child: TabBarView(
                 children: [
-                  Center(child: Text('All Tab Content')),
-                  Center(child: Text('Delivered Tab Content')),
-                  Center(child: Text('Out for delivery Tab Content')),
-                  Center(child: Text('Canceled Tab Content')),
+                  Column(
+                    children: [
+                      SizedBox(height:30.h,),
+                      ItemOrder(),
+                    ],
+                  ),
+          Column(
+              children: [
+                SizedBox(height:30.h,),
+                ItemOrder(),
+              ],),
+                  Column(
+                    children: [
+                      SizedBox(height:30.h,),
+                      ItemOrder(color: AppColors.colorOrange,),
+                    ],),
+                  Column(
+                    children: [
+                      SizedBox(height:30.h,),
+                      ItemOrder(color: AppColors.colorRed,),
+                    ],),
                 ],
               ),
             ),

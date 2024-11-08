@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTextfield extends StatelessWidget {
-  CustomTextfield({
+  const CustomTextfield({
     super.key,
     required this.labelText,
     required this.icon,

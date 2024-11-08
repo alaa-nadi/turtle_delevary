@@ -30,17 +30,23 @@ class LanguageSelectionScreen extends StatelessWidget {
                 color: AppColors.colorWhite,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+               crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 20.h),
-                  Text(
-                    'Choose the language',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 19.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
+                  Row(
+                    children: [
+                      SizedBox(width: 30.w,),
+                      Text(
+                        'Choose the language',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 19.sp,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Rubik',
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(height: 20.h),
                   Padding(
@@ -49,12 +55,12 @@ class LanguageSelectionScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CustomContainer(
+                        const CustomContainer(
                           text: 'Norway',
                           isActiv: false,
                         ),
                         SizedBox(height: 20.h),
-                        CustomContainer(
+                        const CustomContainer(
                           text: 'English',
                           isActiv: false,
                         ),
@@ -64,19 +70,22 @@ class LanguageSelectionScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 15.sp,
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Rubik',
                           ),
                         ),
                         SizedBox(height: 50.h),
-                        CustomButton(
-                          text: 'Next',
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Loginscreen()),
-                            );
-                          },
+                        Center(
+                          child: CustomButton(
+                            text: 'Next',
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const LoginScreen()),
+                              );
+                            }, color: AppColors.colorBlack,
+                          ),
                         ),
                       ],
                     ),
